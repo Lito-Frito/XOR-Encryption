@@ -39,7 +39,11 @@ def encrypt(message, key, ascii, iicsa, keys):
     input(f"\nWe'll use a 256-bit key with a value of {key}")
     print("\nWe'll use the XOR operation to encrypt.\nXOR only returns 1 if the two bits it compares are different; otherwise it returns 0.")
 
+<<<<<<< HEAD
     input(f"It compares the first bit from our encrypted message in binary (0) to the first bit in the key ({key[0]}) using XOR, and so on for every bit.")
+=======
+    input(f"It compares the first bit from our binary string we just made from our message (0) to the first bit in the key ({key[0]}) using XOR, and so on for every bit.")
+>>>>>>> 85742b33d940765b5e1a8b44fea962378e08826d
 
     # Create scrambled i.e the encrypted string
     for j in range(len(bin_string)):
