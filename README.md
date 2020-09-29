@@ -18,6 +18,6 @@ Download the file `simp_xor.py` and then open the CLI from the folder that has t
 
 OR
 
-You can go to [repl.it](https://repl.it/@crc8109/XOR-Encryption#.replit) where I'm hosting the app in a personal repl. When you click the link, just hit > Run:arrow_forward: and the app will start up.
+You can go to [repl.it](https://repl.it/@crc8109/XOR-Encryption#.replit) where I'm hosting the app in a personal repl. When you click the link, just hit `Run` button with the forward arrow and the app will start up.
 
 If this doesn't work, feel free to reach out.
