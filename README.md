@@ -14,10 +14,9 @@ If you've ever wondered how encryption works, XOR is used in many different type
 * a CLI (if you're on Windows, this is the Command Prompt; for Linux and Mac, this is your terminal)
 
 ## Quick Start
-Download the file `simp_xor.py` and then open the CLI from the folder that has the `simp_xor.py` file. Run the file by typing `python3 simp_xor.py`.
-
-OR
-
 You can go to [repl.it](https://repl.it/@crc8109/XOR-Encryption#.replit) where I'm hosting the app in a personal repl. When you click the link, just hit the button up top that says `Run` with the forward arrow and the app will start up.
+
+## Starting from Scratch
+Download the file `simp_xor.py` and then open the CLI from the folder that has the `simp_xor.py` file. Run the file by typing `python3 simp_xor.py`.
 
 If this doesn't work, feel free to reach out.
