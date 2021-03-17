@@ -33,7 +33,7 @@ def encrypt(message, key, ascii, iicsa, keys):
 
     input(f"Blocks: {ascii_blocks}")
 
-    input("\nIf you look up a table for ASCII values in binary online, you'll"\
+    input("\nIf you look up a table for ASCII values in binary online, you'll "\
     "see that the bytes match the values for the letters you typed.")
 
     input("\nNow let's start encrypting.")
@@ -42,8 +42,8 @@ def encrypt(message, key, ascii, iicsa, keys):
     print("\nWe'll use the XOR operation to encrypt.\nXOR only returns 1 if "\
     "the two bits it compares are different; otherwise it returns 0.")
 
-    input(f"It compares the first bit from our encrypted message in binary "\
-    "(0) to the first bit in the key ({key[0]}) using XOR, and so on for every "\
+    input("It compares the first bit from our encrypted message in binary "\
+    f"(0) to the first bit in the key ({key[0]}) using XOR, and so on for every "\
     "bit.")
 
     # Create the encrypted string called 'scrambled'
@@ -69,12 +69,9 @@ def encrypt(message, key, ascii, iicsa, keys):
 
     print(f"\nLet's look at it by byte: {bytes}")
 
-    input("\nSee how these values are different than the ASCII binary values?")
-
-    input("\nLet's try converting it back to regular text to see how it's "\
-    "scrambled:")
-
-    nonsense =
+    input("\nSee how these values are different than the ASCII binary values? "\
+    "If we tried to convert back to ASCII, we get an error. That's because "\
+    "what this generates is gibberish.")
 
     return scrambled
 
@@ -111,6 +108,7 @@ def decrypt(scrambled, ascii, iicsa, key, keys):
     input("\nCompare them to the first bytes I showed you or an ASCII table "\
     "to verify.")
 
+    # Convert back to ASCII text
     for byte in range(len(blocks)) :
         decrypted_message += iicsa[blocks[byte]]
 
@@ -206,6 +204,7 @@ def block_cipher():
 
     # Reverse key:value pairs in ascii{}
     iicsa = dict([(value, key) for key, value in ascii.items()])
+
     input("Welcome! This is a tool to help people understand a simple "\
     "encryption technique called XOR.")
 
