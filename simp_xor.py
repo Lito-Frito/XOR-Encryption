@@ -1,4 +1,5 @@
 import random
+from textwrap import dedent
 
 def encrypt(message, key, ascii, iicsa, keys):
     input("\nGreat! Let's change this into ASCII.")
@@ -32,16 +33,20 @@ def encrypt(message, key, ascii, iicsa, keys):
 
     input(f"Blocks: {ascii_blocks}")
 
-    input("\nIf you look up a table for ASCII values in binary online, you'll see that the bytes match the values for the letters you typed.")
+    input("\nIf you look up a table for ASCII values in binary online, you'll"\
+    "see that the bytes match the values for the letters you typed.")
 
     input("\nNow let's start encrypting.")
 
     input(f"\nWe'll use a 256-bit key with a value of {key}")
-    print("\nWe'll use the XOR operation to encrypt.\nXOR only returns 1 if the two bits it compares are different; otherwise it returns 0.")
+    print("\nWe'll use the XOR operation to encrypt.\nXOR only returns 1 if "\
+    "the two bits it compares are different; otherwise it returns 0.")
 
-    input(f"It compares the first bit from our encrypted message in binary (0) to the first bit in the key ({key[0]}) using XOR, and so on for every bit.")
+    input(f"It compares the first bit from our encrypted message in binary "\
+    "(0) to the first bit in the key ({key[0]}) using XOR, and so on for every "\
+    "bit.")
 
-    # Create scrambled i.e the encrypted string
+    # Create the encrypted string called 'scrambled'
     for j in range(len(bin_string)):
         scrambled += str(int(bin_string[j]) ^ int(key[j]))
 
@@ -64,15 +69,21 @@ def encrypt(message, key, ascii, iicsa, keys):
 
     print(f"\nLet's look at it by byte: {bytes}")
 
-    input("See how these values are different than the ASCII binary values?")
+    input("\nSee how these values are different than the ASCII binary values?")
+
+    input("\nLet's try converting it back to regular text to see how it's "\
+    "scrambled:")
+
+    nonsense =
 
     return scrambled
 
 
 def decrypt(scrambled, ascii, iicsa, key, keys):
-    input("""\nTo decrypt, we simply take the same 256-bit key we used to encrypt and run the XOR operation again.
-This type of encryption is called symmetrical because the same key is used in encryption and decryption.
-Now let's decrypt.""")
+    input("\nTo decrypt, we simply take the same 256-bit key we used to "\
+    "encrypt and run the XOR operation again. This type of encryption is called "\
+    "symmetrical because the same key is used in encryption and decryption. Now "\
+    "let's decrypt.")
 
     input("\nDecrypting...")
     reversed = ''
@@ -95,9 +106,10 @@ Now let's decrypt.""")
             block += 1
 
     decrypted_message = ''
-    input(f"\nHere's your message translated back to ASCII via binary: {blocks}")
+    input(f"\nHere's your message changed back to ASCII via binary: {blocks}")
 
-    input("\nYou can compare them to the first bytes I showed you or an ASCII table to verify.")
+    input("\nCompare them to the first bytes I showed you or an ASCII table "\
+    "to verify.")
 
     for byte in range(len(blocks)) :
         decrypted_message += iicsa[blocks[byte]]
@@ -106,11 +118,16 @@ Now let's decrypt.""")
 
     input(f"\nYour decrypted message is: \"{decrypted_message}\"")
 
-    input("""\nUsing XOR in encryption is a common technique, but it's not enough on its own.
-This is because if you send enough messages, people can figure out your key.
-One way to counteract this is to use a different key for each message, but that soon starts to take up a lot of space.
-You can run this script again and it'll use a different key if you want to see how that changes things.
-That's it; hope you learned something!""")
+    input("\nUsing XOR in encryption is a common technique, but it's not "\
+    "enough on its own. This is because if you send enough messages, people "\
+    "can figure out your key.")
+
+    input("\nOne way to counteract this is to use a different key for each "\
+    "message, but that soon starts to take up a lot of space. You can run  "\
+    "this script again and it'll use a different key if you want to see how  "\
+    "that changes things.")
+
+    input("\nThat's it; hope you learned something!")
 
     return
 
@@ -189,11 +206,13 @@ def block_cipher():
 
     # Reverse key:value pairs in ascii{}
     iicsa = dict([(value, key) for key, value in ascii.items()])
-    print("Welcome. This is a tool to help people understand a simple encryption technique.")
+    input("Welcome! This is a tool to help people understand a simple "\
+    "encryption technique called XOR.")
 
     ok_length = True
     while ok_length:
-        phrase = input("Type a message that has 32 characters or less using letters, numbers, or basic punctuation> ")
+        phrase = input("Type a message that has 32 characters or less using "\
+        "letters, numbers, or basic punctuation: ")
         if len(phrase) > 32:
             print("\nThat's too long; make sure it's less than 32 characters.")
 
