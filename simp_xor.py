@@ -34,8 +34,8 @@ def encrypt(message, key, ascii, iicsa, keys):
     input(f"Blocks: {ascii_blocks}")
 
     input("\nLet's look up a table for ASCII values in binary and print out "\
-    "their values by character; you'll see that the bytes match the values "\
-    "for the letters you typed.\n")
+    "their values by character; you'll see that the bytes match the values for"\
+    "the letters you typed.\n")
 
     for char in message:
         print(char, ascii[char])
