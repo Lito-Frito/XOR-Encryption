@@ -33,8 +33,12 @@ def encrypt(message, key, ascii, iicsa, keys):
 
     input(f"Blocks: {ascii_blocks}")
 
-    input("\nIf you look up a table for ASCII values in binary online, you'll "\
-    "see that the bytes match the values for the letters you typed.")
+    input("\nLet's look up a table for ASCII values in binary and print out "\
+    "their values by character; you'll see that the bytes match the values "\
+    "for the letters you typed.\n")
+
+    for char in message:
+        print(char, ascii[char])
 
     input("\nNow let's start encrypting.")
 
@@ -43,8 +47,8 @@ def encrypt(message, key, ascii, iicsa, keys):
     "the two bits it compares are different; otherwise it returns 0.")
 
     input("It compares the first bit from our encrypted message in binary "\
-    f"(0) to the first bit in the key ({key[0]}) using XOR, and so on for every "\
-    "bit.")
+    f"(0) to the first bit in the key ({key[0]}) using XOR, and so on for "\
+    "every bit.")
 
     # Create the encrypted string called 'scrambled'
     for j in range(len(bin_string)):
@@ -228,10 +232,6 @@ def block_cipher():
     '1100' * 64]
 
     key = keys[random.randint(1,7)]
-
-    # 01101000011010010110100001101001 is HIHI
-    # key = 11111111111111111111111111111111
-    # XOR = 10010111100101101001011110010110
 
     scrambled = encrypt(phrase, key, ascii, iicsa, keys)
     decrypt(scrambled, ascii, iicsa, key, keys)
