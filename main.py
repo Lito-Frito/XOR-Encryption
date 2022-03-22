@@ -1,6 +1,6 @@
 import random
-import encrypt
-import decrypt
+from encrypt import encrypt
+from decrypt import decrypt
 
 
 def block_cipher():
@@ -98,12 +98,12 @@ def block_cipher():
             '0000' * 64,
             '1010' * 64,
             '0101' * 64,
-            '1010' * 64,
+            '0110' * 64,
             '1001' * 64,
             '0011' * 64,
             '1100' * 64]
 
-    key = keys[random.randint(1, 8)]
+    key = keys[random.randint(0, 7)]
 
     scrambled = encrypt(phrase, key, ascii, iicsa)
     decrypt(scrambled, ascii, iicsa, key)
