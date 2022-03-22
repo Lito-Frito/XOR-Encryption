@@ -36,8 +36,9 @@ def block_cipher():
         ' ': '00100000',
         '!': '00100001',
         '?': '00111111',
-        '\'': '00100111',
+        '\'': '01011100',
         '/': '00101111',
+        '\'': '01011100',
         '"': '00100010',
         '0': '00110000',
         '1': '00110001',
@@ -104,5 +105,5 @@ def block_cipher():
 
     key = keys[random.randint(1, 8)]
 
-    scrambled = encrypt(phrase, key, ascii, iicsa, keys)
-    decrypt(scrambled, ascii, iicsa, key, keys)
+    scrambled = encrypt(phrase, key, ascii, iicsa)
+    decrypt(scrambled, ascii, iicsa, key)
