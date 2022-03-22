@@ -48,6 +48,6 @@ def decrypt(scrambled, ascii, iicsa, key):
           "run this script again and it'll use a different key if you want to "
           "see how that changes things.")
 
-    input("\nThat's it; hope you learned something!")
+    input("\nThat's it; I hope you learned something!")
 
     return
