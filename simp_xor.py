@@ -210,15 +210,15 @@ def block_cipher():
     input("Welcome! This is a tool to help people understand a simple "
           "encryption technique called XOR.")
 
-    ok_length = True
-    while ok_length:
+    not_ok_length = True
+    while not_ok_length:
         phrase = input("Type a message that has 32 characters or less using "
                        "letters, numbers, or basic punctuation: ")
         if len(phrase) > 32:
             print("\nThat's too long; make sure it's less than 32 characters.")
 
         else:
-            ok_length = False
+            not_ok_length = False
 
     keys = ['1111' * 64,
             '0000' * 64,
