@@ -107,3 +107,6 @@ def block_cipher():
 
     scrambled = encrypt(phrase, key, ascii, iicsa)
     decrypt(scrambled, ascii, iicsa, key)
+
+
+block_cipher()
