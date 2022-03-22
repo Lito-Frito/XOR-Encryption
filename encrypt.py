@@ -5,8 +5,8 @@ def encrypt(message, key, ascii, iicsa):
     scrambled = ''
 
     # Create binary version of message
-    for i in range(len(message)):
-        bin_string += ascii[message[i]]
+    for letter in range(len(message)):
+        bin_string += ascii[message[letter]]
 
     input(
         f"\nHere's your message translated from ASCII to binary: {bin_string}")
@@ -47,17 +47,17 @@ def encrypt(message, key, ascii, iicsa):
           "for every bit.")
 
     # Create the encrypted string called 'scrambled'
-    for j in range(len(bin_string)):
-        scrambled += str(int(bin_string[j]) ^ int(key[j]))
+    for bit in range(len(bin_string)):
+        scrambled += str(int(bin_string[bit]) ^ int(key[bit]))
 
     input(f"\nYour encrypted message is: {scrambled}")
 
-    # create number of needed bytes
+    # create number of needed bytes (unit of 8 bits)
     bytes = []
-    for num in range(len(scrambled)//8):
+    for bit in range(len(scrambled)//8):
         bytes.append('')
 
-    # Fill each byte
+    # Fill each byte, same as before
     byte = 0
     for bit in range(len(scrambled)):
         bytes[byte] += scrambled[bit]
