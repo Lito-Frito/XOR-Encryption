@@ -229,7 +229,7 @@ def block_cipher():
             '0011' * 64,
             '1100' * 64]
 
-    key = keys[random.randint(1, 7)]
+    key = keys[random.randint(1, 8)]
 
     scrambled = encrypt(phrase, key, ascii, iicsa, keys)
     decrypt(scrambled, ascii, iicsa, key, keys)
