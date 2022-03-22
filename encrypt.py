@@ -39,6 +39,7 @@ def encrypt(message, key, ascii, iicsa):
     input("\nNow let's start encrypting.")
 
     input(f"\nWe'll use a 256-bit key with a value of {key}")
+    
     print("\nWe'll use the XOR operation to encrypt.\nXOR only returns 1 if "
           "the two bits it compares are different; otherwise it returns 0.")
 
