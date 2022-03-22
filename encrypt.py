@@ -39,7 +39,7 @@ def encrypt(message, key, ascii, iicsa):
     input("\nNow let's start encrypting.")
 
     input(f"\nWe'll use a 256-bit key with a value of {key}")
-    
+
     print("\nWe'll use the XOR operation to encrypt.\nXOR only returns 1 if "
           "the two bits it compares are different; otherwise it returns 0.")
 
@@ -67,7 +67,7 @@ def encrypt(message, key, ascii, iicsa):
         if len(bytes[byte]) == 8:
             byte += 1
 
-    print(f"\nLet's look at it by byte: {bytes}")
+    print(f"\nLet's look at it byte by byte: {bytes}")
 
     input("\nSee how these values are different than the ASCII binary values? "
           "If we tried to convert back to ASCII, we get an error. That's "
