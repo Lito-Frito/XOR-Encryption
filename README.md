@@ -21,3 +21,10 @@ You can go to [repl.it](https://repl.it/@crc8109/XOR-Encryption#.replit) where I
 Download the file `main.py` and then open the CLI from the folder that has the `main.py` file. Run the file by typing `python3 main.py`.
 
 If this doesn't work, feel free to reach out!
+
+## Running Via Docker
+This script is available as a container (if you needed it as one for whatever reason) over at [Docker Hub](https://hub.docker.com/r/crc8109/xor_program).
+
+You can download the image via `docker pull crc8109/xor_program`.
+
+Run the container via `docker run -i xor_program`. Don't forget the `-i` flag. You need to be able to pass along STDIN to the container, otherwise the application won't run properly.
