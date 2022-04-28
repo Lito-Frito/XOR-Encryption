@@ -7,8 +7,8 @@ This is a simple CLI app I made that showcases how XOR is implemented in encrypt
 If you've ever wondered how encryption works, XOR is used in many different types of encryption algorithms at some point.
 
 ## What This Includes
-`main.py`: The example script to showcase XOR encryption. Run this to see the XOR encryption demo.
-`encrypt.py` & `decrypt.py`: Supplementary files that feed into `main.py`. No need to touch these.
+* `main.py`: The example script to showcase XOR encryption; run this to see the XOR encryption demo.
+* `encrypt.py` & `decrypt.py`: Supplementary files that feed into `main.py` (no need to touch these).
 
 # Getting Started
 
