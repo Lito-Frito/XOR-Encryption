@@ -1,12 +1,14 @@
-# XOR Block Cipher Algorithm
+# XOR Encryption Demo
+![XOR](https://user-images.githubusercontent.com/56422761/165651711-3a9c08c4-0959-4607-9cea-805b10c4e8f3.png)
 ## [![Run on Repl.it](https://repl.it/badge/github/crc8109/XOR-Encryption)](https://repl.it/github/crc8109/XOR-Encryption)
+
 This is a simple CLI app I made that showcases how XOR is implemented in encryption. I made this because we learned about how encryption works in my grad class and I wanted a tool to help people visualize how one of the basic techniques in encryption works.
 
 If you've ever wondered how encryption works, XOR is used in many different types of encryption algorithms at some point.
 
 ## What This Includes
-`main.py`: The example script to showcase XOR encryption. Run this to see the XOR encryption demo.
-`encrypt.py` & `decrypt.py`: Supplementary files that feed into `main.py`. No need to touch these.
+* `main.py`: The example script to showcase XOR encryption; run this to see the XOR encryption demo.
+* `encrypt.py` & `decrypt.py`: Supplementary files that feed into `main.py` (no need to touch these).
 
 # Getting Started
 
