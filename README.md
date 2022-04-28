@@ -1,5 +1,6 @@
 # XOR Block Cipher Algorithm
 ## [![Run on Repl.it](https://repl.it/badge/github/crc8109/XOR-Encryption)](https://repl.it/github/crc8109/XOR-Encryption)
+![XOR](https://user-images.githubusercontent.com/56422761/165651711-3a9c08c4-0959-4607-9cea-805b10c4e8f3.png)
 This is a simple CLI app I made that showcases how XOR is implemented in encryption. I made this because we learned about how encryption works in my grad class and I wanted a tool to help people visualize how one of the basic techniques in encryption works.
 
 If you've ever wondered how encryption works, XOR is used in many different types of encryption algorithms at some point.
