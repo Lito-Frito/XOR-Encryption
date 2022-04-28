@@ -1,4 +1,4 @@
-# XOR Block Cipher Algorithm
+# XOR Encryption Demo
 ![XOR](https://user-images.githubusercontent.com/56422761/165651711-3a9c08c4-0959-4607-9cea-805b10c4e8f3.png)
 ## [![Run on Repl.it](https://repl.it/badge/github/crc8109/XOR-Encryption)](https://repl.it/github/crc8109/XOR-Encryption)
 
