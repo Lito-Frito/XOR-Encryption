@@ -26,6 +26,6 @@ Download the file `main.py` and then open the CLI from the folder that has the `
 If this doesn't work, feel free to reach out!
 
 ## Running Via Docker
-This script is available as a container (if you needed it as one for whatever reason) over at [Docker Hub](https://hub.docker.com/r/crc8109/xor_program). You can download the image via `docker pull crc8109/xor_program`.
+This script is available as a container (if you needed it as one for whatever reason) over at [Docker Hub](https://hub.docker.com/r/crc8109/xor_program). You can download the image via `docker pull crc8109/xor_program:1.0`.
 
 Run the container via `docker run -i xor_program`. Don't forget the `-i` flag. You need to be able to pass along STDIN to the container, otherwise the application won't run properly.
