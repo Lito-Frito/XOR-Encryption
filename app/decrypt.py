@@ -1,3 +1,10 @@
+def pure_decrypt(scrambled, key, ascii, iicsa):
+    decrypted_bin = ''.join(str(int(scrambled[i]) ^ int(key[i])) for i in range(len(scrambled)))
+    blocks = [decrypted_bin[i:i+8] for i in range(0, len(decrypted_bin), 8)]
+    decrypted_message = ''.join(iicsa[block] for block in blocks)
+    return decrypted_message
+
+
 def decrypt(scrambled, ascii, iicsa, key):
     input("\nTo decrypt, we simply take the same 256-bit key we used to "
           "encrypt and run XOR again. This type of encryption is called "
@@ -6,34 +13,18 @@ def decrypt(scrambled, ascii, iicsa, key):
           "encrypt and another to decrypt. Now let's decrypt.")
 
     input("\nDecrypting...")
-    decrypted = ''
-    # Decrypt encrypted message by using XOR (^) again
-    for k in range(len(scrambled)):
-        decrypted += str(int(scrambled[k]) ^ int(key[k]))
+    decrypted_bin = ''.join(str(int(scrambled[i]) ^ int(key[i])) for i in range(len(scrambled)))
 
     # create number of needed blocks again
-    blocks = []
-    for block in range(len(scrambled)//8):
-        blocks.append('')
+    blocks = [decrypted_bin[i:i+8] for i in range(0, len(decrypted_bin), 8)]
 
-    # start filling out each byte with the decrypted binary (ASCII values)
-    block = 0
-    for letter in range(len(decrypted)):
-        blocks[block] += decrypted[letter]
-
-        # parse digits by bytes
-        if len(blocks[block]) == 8:
-            block += 1
-
-    decrypted_message = ''
     input(f"\nHere's your message changed back to ASCII via binary: {blocks}")
 
     input("\nCompare them to the first bytes I showed you or an ASCII table "
           "to verify.")
 
     # Convert back to ASCII text
-    for byte in range(len(blocks)):
-        decrypted_message += iicsa[blocks[byte]]
+    decrypted_message = pure_decrypt(scrambled, key, ascii, iicsa)
 
     input("\nNow we'll convert these bits back into text.")
 

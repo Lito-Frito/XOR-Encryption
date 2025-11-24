@@ -1,3 +1,9 @@
+def pure_encrypt(message, key, ascii, iicsa):
+    bin_string = ''.join(ascii[char] for char in message)
+    scrambled = ''.join(str(int(bin_string[i]) ^ int(key[i])) for i in range(len(bin_string)))
+    return scrambled
+
+
 def encrypt(message, key, ascii, iicsa):
     input("\nGreat! Let's change this into ASCII.")
 
@@ -48,8 +54,7 @@ def encrypt(message, key, ascii, iicsa):
           "for every bit.")
 
     # Create the encrypted string called 'scrambled'
-    for bit in range(len(bin_string)):
-        scrambled += str(int(bin_string[bit]) ^ int(key[bit]))
+    scrambled = pure_encrypt(message, key, ascii, iicsa)
 
     input(f"\nYour encrypted message is: {scrambled}")
 
